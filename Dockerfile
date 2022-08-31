@@ -1,2 +1,4 @@
 FROM openjdk:8-jdk-alpine
-ENTRYPOINT ["java","-jar","app.jar"]
+VOLUME /tmp
+COPY *.jar app.jar
+ENTRYPOINT ["java","-jar","/app.jar"]
