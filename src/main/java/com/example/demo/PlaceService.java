@@ -17,7 +17,7 @@ public class PlaceService {
         if (country == null) {
             return listOfPlaces;
         } else {
-            return listOfPlaces.stream().filter(c -> c.getCategory().equals(country)).collect(Collectors.toList());
+            return listOfPlaces.stream().filter(c -> c.getCountry().equals(country)).collect(Collectors.toList());
         }
     }
 
